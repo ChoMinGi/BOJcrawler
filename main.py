@@ -8,6 +8,7 @@ response = requests.get(url)
 step_list = []
 num=[]
 sub=[]
+pc=[]
 
 if response.status_code == 200:
     html = response.text
@@ -36,6 +37,19 @@ if response.status_code == 200:
             subs = pb.find("a").text
             num.append(nums)
             sub.append(subs)
+            pblink = pb.find("a").attrs['href']
+            pbcontent = f"https://www.acmicpc.net{pblink}"
+            pbcontent_response = requests.get(pbcontent)
+            if pbcontent_response.status_code == 200:
+                pbcontent_html = pbcontent_response.text
+                pbcontent_soup = BeautifulSoup(pbcontent_html, 'html.parser')
+                pbcontent_main = pbcontent_soup.find("div", {"id": "problem-body"})
+                pcs = pbcontent_main.find("div",{"class": "problem-text"}).text
+                pc.append(pcs)
+                
+            else:
+                print(f'There is no content in {nums}')
+                
     else:
         print(f'errorcode: {step_response.status_code} at {steps}step')
     if len(num) == len(sub):
@@ -46,6 +60,14 @@ if response.status_code == 200:
 else:
     print(response.status_code)
     
+
+
+
+
+
+
+
+
 # 블로그 html 출력부
 print('''
 <p data-ke-size="size16">&nbsp;</p>
@@ -62,6 +84,12 @@ for i in range(len(num)):
     print(f'<h3 data-ke-size="size23"><b>{sub[i]}<b>(#{num[i]})</b></b></h3>')
     print('''
     <!-- Hint 란 -->
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    <li>Problem</li>
+    </ul>
+    ''')
+    print(f'<p data-ke-size="size16">{pc[i]}</p>')
+    print('''
     <ul style="list-style-type: disc;" data-ke-list-type="disc">
     <li>Hint</li>
     </ul>
