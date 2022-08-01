@@ -73,7 +73,7 @@ print('''
 <p data-ke-size="size16">&nbsp;</p>
 <!-- 목차 부분 -->
 <div class="book-toc">
-<p data-ke-size="size16">목차</p>
+<p data-ke-size="size16"><i><b><span style="font-family: 'Noto Serif KR';">목차</span></b></i></p>
 <ul id="toc" style="list-style-type: disc;" data-ke-list-type="disc"></ul>
 </div>
 <p data-ke-size="size16">&nbsp;</p>
@@ -81,27 +81,25 @@ print('''
 <!-- 제목 -->
 ''')
 for i in range(len(num)):
-    print(f'<h3 data-ke-size="size23"><b>{sub[i]}<b>(#{num[i]})</b></b></h3>')
+    print(f'<h3 data-ke-size="size23"><b><span style="font-family: \'Noto Serif KR\';">{sub[i]}<b>(#{num[i]})</b></b></h3>')
     print('''
     <!-- Hint 란 -->
     <ul style="list-style-type: disc;" data-ke-list-type="disc">
-    <li>Problem</li>
+    <li><b><span style="font-family: 'Noto Serif KR';">Problem</span></b></li>
     </ul>
     ''')
-    print(f'<p data-ke-size="size16">{pc[i]}</p>')
+    print(f'<p data-ke-size="size16"><span style="font-family: \'Noto Serif KR\';">{pc[i]}</p>')
     print('''
     <ul style="list-style-type: disc;" data-ke-list-type="disc">
-    <li>Hint</li>
+    <li><b><span style="font-family: 'Noto Serif KR';">Hint</span></b></li>
     </ul>
 
-    <p data-ke-size="size16">힌트입력 (==)</p>
-
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">힌트입력 (==)</p>
     <!-- Solution 란 -->
     <ul style="list-style-type: disc;" data-ke-list-type="disc">
-    <li>Solution</li>
+    <li><b><span style="font-family: 'Noto Serif KR';">Solution</span></b></li>
     </ul>
-
-    <p data-ke-size="size16">을 이용한 풀이</p>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">을 이용한 풀이</p>
 
     <!-- 코드 삽입란 -->
     <pre class="vim">
@@ -109,7 +107,11 @@ for i in range(len(num)):
             code code
         </code>
     </pre>
-
+    
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 01</p>
+    
     <!-- 구분선 -->
     <hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 02</p>
     ''')
+    
