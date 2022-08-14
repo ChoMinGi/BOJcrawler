@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+
 url = 'https://www.acmicpc.net/step'
 
 response = requests.get(url)
@@ -90,28 +91,47 @@ for i in range(len(num)):
     ''')
     print(f'<p data-ke-size="size16"><span style="font-family: \'Noto Serif KR\';">{pc[i]}</p>')
     print('''
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
     <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    
     <li><b><span style="font-family: 'Noto Serif KR';">Hint</span></b></li>
     </ul>
 
     <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">힌트입력 (==)</p>
     <!-- Solution 란 -->
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
     <ul style="list-style-type: disc;" data-ke-list-type="disc">
     <li><b><span style="font-family: 'Noto Serif KR';">Solution</span></b></li>
     </ul>
     <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">을 이용한 풀이</p>
 
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
     <!-- 코드 삽입란 -->
     <pre class="vim">
         <code>
             code code
         </code>
     </pre>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
     
     <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 01</p>
     
     <!-- 구분선 -->
     <hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
     <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 02</p>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
     ''')
-    
+
+# 태그 입력을 위한 키워드
+print(*sub)
+
+# 다중 크롤링 시에 구분 색적 용도
+print("==================================================")
+print("==================================================")
+print("==================================================")
+print("==================================================")
+print("==================================================")
+print("==================================================")
+print("==================================================")
+print("==================================================")
