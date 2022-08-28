@@ -1,4 +1,5 @@
 import requests
+import sys
 from bs4 import BeautifulSoup
 
 
@@ -62,13 +63,7 @@ else:
     print(response.status_code)
     
 
-
-
-
-
-
-
-
+sys.stdout=open(f'output {need_step}.txt','w')
 # 블로그 html 출력부
 print('''
 <p data-ke-size="size16">&nbsp;</p>
@@ -135,3 +130,4 @@ print("==================================================")
 print("==================================================")
 print("==================================================")
 print("==================================================")
+
