@@ -1,0 +1,274 @@
+[백준/python] 누적 합 전체 풀이(17단계)
+
+<p data-ke-size="size16">&nbsp;</p>
+<!-- 목차 부분 -->
+<div class="book-toc">
+<p data-ke-size="size16"><i><b><span style="font-family: 'Noto Serif KR';">목차</span></b></i></p>
+<ul id="toc" style="list-style-type: disc;" data-ke-list-type="disc"></ul>
+</div>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16"><br /><br /></p>
+<!-- 제목 -->
+
+<h3 data-ke-size="size23"><b><span style="font-family: 'Noto Serif KR';">구간 합 구하기 4<b>(#11659)</b></b></h3>
+
+    <!-- Hint 란 -->
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    <li><b><span style="font-family: 'Noto Serif KR';">Problem</span></b></li>
+    </ul>
+    
+<p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">
+수 N개가 주어졌을 때, i번째 수부터 j번째 수까지 합을 구하는 프로그램을 작성하시오.
+</p>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    
+    <li><b><span style="font-family: 'Noto Serif KR';">Hint</span></b></li>
+    </ul>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">힌트입력 (==)</p>
+    <!-- Solution 란 -->
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    <li><b><span style="font-family: 'Noto Serif KR';">Solution</span></b></li>
+    </ul>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">을 이용한 풀이</p>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <!-- 코드 삽입란 -->
+    <pre class="vim">
+        <code>
+            code code
+        </code>
+    </pre>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 01</p>
+    
+    <!-- 구분선 -->
+    <hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 02</p>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    
+<h3 data-ke-size="size23"><b><span style="font-family: 'Noto Serif KR';">수열<b>(#2559)</b></b></h3>
+
+    <!-- Hint 란 -->
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    <li><b><span style="font-family: 'Noto Serif KR';">Problem</span></b></li>
+    </ul>
+    
+<p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">
+매일 아침 9시에 학교에서 측정한 온도가 어떤 정수의 수열로 주어졌을 때, 연속적인 며칠 동안의 온도의 합이 가장 큰 값을 알아보고자 한다.
+예를 들어, 아래와 같이 10일 간의 온도가 주어졌을 때, 
+3 -2 -4 -9 0 3 7 13 8 -3
+모든 연속적인 이틀간의 온도의 합은 아래와 같다.
+
+이때, 온도의 합이 가장 큰 값은 21이다. 
+또 다른 예로 위와 같은 온도가 주어졌을 때, 모든 연속적인 5일 간의 온도의 합은 아래와 같으며, 
+
+이때, 온도의 합이 가장 큰 값은 31이다.
+매일 측정한 온도가 정수의 수열로 주어졌을 때, 연속적인 며칠 동안의 온도의 합이 가장 큰 값을 계산하는 프로그램을 작성하시오. 
+</p>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    
+    <li><b><span style="font-family: 'Noto Serif KR';">Hint</span></b></li>
+    </ul>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">힌트입력 (==)</p>
+    <!-- Solution 란 -->
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    <li><b><span style="font-family: 'Noto Serif KR';">Solution</span></b></li>
+    </ul>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">을 이용한 풀이</p>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <!-- 코드 삽입란 -->
+    <pre class="vim">
+        <code>
+            code code
+        </code>
+    </pre>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 01</p>
+    
+    <!-- 구분선 -->
+    <hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 02</p>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    
+<h3 data-ke-size="size23"><b><span style="font-family: 'Noto Serif KR';">인간-컴퓨터 상호작용<b>(#16139)</b></b></h3>
+
+    <!-- Hint 란 -->
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    <li><b><span style="font-family: 'Noto Serif KR';">Problem</span></b></li>
+    </ul>
+    
+<p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">
+승재는 인간-컴퓨터 상호작용에서 생체공학 설계를 공부하다가 키보드 자판이 실용적인지 궁금해졌다. 이를 알아보기 위해 승재는 다음과 같은 생각을 했다. 
+'문자열에서 특정 알파벳이 몇 번 나타나는지 알아봐서 자주 나타나는 알파벳이 중지나 검지 위치에 오는 알파벳인지 확인하면 실용적인지 확인할 수 있을 것이다.'
+승재를 도와 특정 문자열 $S$, 특정 알파벳 $\alpha$와 문자열의 구간 $[l,r]$이 주어지면 $S$의 $l$번째 문자부터 $r$번째 문자 사이에 $\alpha$가 몇 번 나타나는지 구하는 프로그램을 작성하여라. 승재는 문자열의 문자는 $0$번째부터 세며, $l$번째와 $r$번째 문자를 포함해서 생각한다. 주의할 점은 승재는 호기심이 많기에 (통계적으로 크게 무의미하지만) 같은 문자열을 두고 질문을 $q$번 할 것이다.
+</p>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    
+    <li><b><span style="font-family: 'Noto Serif KR';">Hint</span></b></li>
+    </ul>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">힌트입력 (==)</p>
+    <!-- Solution 란 -->
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    <li><b><span style="font-family: 'Noto Serif KR';">Solution</span></b></li>
+    </ul>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">을 이용한 풀이</p>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <!-- 코드 삽입란 -->
+    <pre class="vim">
+        <code>
+            code code
+        </code>
+    </pre>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 01</p>
+    
+    <!-- 구분선 -->
+    <hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 02</p>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    
+<h3 data-ke-size="size23"><b><span style="font-family: 'Noto Serif KR';">나머지 합<b>(#10986)</b></b></h3>
+
+    <!-- Hint 란 -->
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    <li><b><span style="font-family: 'Noto Serif KR';">Problem</span></b></li>
+    </ul>
+    
+<p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">
+수 N개 A1, A2, ..., AN이 주어진다. 이때, 연속된 부분 구간의 합이 M으로 나누어 떨어지는 구간의 개수를 구하는 프로그램을 작성하시오.
+즉, Ai + ... + Aj (i ≤ j) 의 합이 M으로 나누어 떨어지는 (i, j) 쌍의 개수를 구해야 한다.
+</p>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    
+    <li><b><span style="font-family: 'Noto Serif KR';">Hint</span></b></li>
+    </ul>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">힌트입력 (==)</p>
+    <!-- Solution 란 -->
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    <li><b><span style="font-family: 'Noto Serif KR';">Solution</span></b></li>
+    </ul>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">을 이용한 풀이</p>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <!-- 코드 삽입란 -->
+    <pre class="vim">
+        <code>
+            code code
+        </code>
+    </pre>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 01</p>
+    
+    <!-- 구분선 -->
+    <hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 02</p>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    
+<h3 data-ke-size="size23"><b><span style="font-family: 'Noto Serif KR';">구간 합 구하기 5<b>(#11660)</b></b></h3>
+
+    <!-- Hint 란 -->
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    <li><b><span style="font-family: 'Noto Serif KR';">Problem</span></b></li>
+    </ul>
+    
+<p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">
+N×N개의 수가 N×N 크기의 표에 채워져 있다. (x1, y1)부터 (x2, y2)까지 합을 구하는 프로그램을 작성하시오. (x, y)는 x행 y열을 의미한다.
+예를 들어, N = 4이고, 표가 아래와 같이 채워져 있는 경우를 살펴보자.
+
+
+
+1
+2
+3
+4
+
+
+2
+3
+4
+5
+
+
+3
+4
+5
+6
+
+
+4
+5
+6
+7
+
+
+
+여기서 (2, 2)부터 (3, 4)까지 합을 구하면 3+4+5+4+5+6 = 27이고, (4, 4)부터 (4, 4)까지 합을 구하면 7이다.
+표에 채워져 있는 수와 합을 구하는 연산이 주어졌을 때, 이를 처리하는 프로그램을 작성하시오.
+</p>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    
+    <li><b><span style="font-family: 'Noto Serif KR';">Hint</span></b></li>
+    </ul>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">힌트입력 (==)</p>
+    <!-- Solution 란 -->
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <ul style="list-style-type: disc;" data-ke-list-type="disc">
+    <li><b><span style="font-family: 'Noto Serif KR';">Solution</span></b></li>
+    </ul>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">을 이용한 풀이</p>
+
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <!-- 코드 삽입란 -->
+    <pre class="vim">
+        <code>
+            code code
+        </code>
+    </pre>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 01</p>
+    
+    <!-- 구분선 -->
+    <hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 02</p>
+    <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
+    
+구간 합 구하기 4 수열 인간-컴퓨터 상호작용 나머지 합 구간 합 구하기 5
+==================================================
+==================================================
+==================================================
+==================================================
+==================================================
+==================================================
+==================================================
+==================================================
