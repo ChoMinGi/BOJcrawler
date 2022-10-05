@@ -32,6 +32,9 @@ if response.status_code == 200:
         step_soup = BeautifulSoup(step_html, 'html.parser')
         step_main = step_soup.find(
             "div", {"class": "table-responsive"})
+        step_name = step_soup.find(
+            "div", {"class": "breadcrumbs"}).text
+        print(step_name)
         step_body = step_main.find("tbody")
         pbs = step_body.find_all("tr")
         for pb in pbs[0::2]:
@@ -65,6 +68,7 @@ else:
 
 sys.stdout=open(f'output {need_step}.txt','w')
 # 블로그 html 출력부
+print(f'[백준/python] {step_name} 전체 풀이({need_step}단계)')
 print('''
 <p data-ke-size="size16">&nbsp;</p>
 <!-- 목차 부분 -->
