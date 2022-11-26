@@ -34,7 +34,6 @@ if response.status_code == 200:
             "div", {"class": "table-responsive"})
         step_name = step_soup.find(
             "div", {"class": "breadcrumbs"}).text
-        print(step_name)
         step_body = step_main.find("tbody")
         pbs = step_body.find_all("tr")
         for pb in pbs[0::2]:
