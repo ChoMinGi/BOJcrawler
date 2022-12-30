@@ -1,6 +1,6 @@
 # BOJcrawler
  To reduce the hassle of blog posting
- 포스팅에 사용될 문제나 예제 문제 설명등을 원하는 tistory HTML 서식 형태로 출력
+ 포스팅에 사용될 문제나 예제 문제 설명등을 원하는 HTML 서식 형태로 출력
  
  
 # Overview
