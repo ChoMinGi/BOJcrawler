@@ -4,6 +4,8 @@
  
  포스팅에 사용될 문제나 예제 문제 설명등을 원하는 HTML 서식 형태로 출력
  
+ + 여러가지 부가적인(많은) 기능들이 추가 탑재 되었습니다 바로 in Ver 2.0.0 에서!
+ 
  
 # Overview
  fully compatible with tistory
