@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 url = 'https://www.acmicpc.net/step'
 
-response = requests.get(url)
+response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
 
 step_list = []
 num=[]
@@ -23,7 +23,7 @@ if response.status_code == 200:
         steps = f"https://www.acmicpc.net{lnk}"
         step_list.append(steps)
 # 필요한 링크를 모두 가져왔다.
-    need_step = input("필요한 단계를 입력하시오.")
+    need_step = int(input("필요한 단계를 입력하시오."))
     steps = step_list[int(need_step)-1]
 # request를 해오고 이를 BS로 html을 파싱해온다.
     step_response = requests.get(steps)
@@ -62,7 +62,9 @@ if response.status_code == 200:
         print('something is wrong..')
         
 else:
-    print(response.status_code)
+    print("파싱 에러",response.status_code)
+    raise ConnectionError("크롤링 HTML 가져오지 못하였음")
+
     
 
 sys.stdout=open(f'output {need_step}.txt','w')
