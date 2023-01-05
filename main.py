@@ -142,11 +142,14 @@ if whole_response.status_code == 200:
         step_body = step_main.find("tbody")
         pbs = step_body.find_all("tr")
         cnt = 1
+        # Step 에 해당하는 폴더 생성하기
         make_step_dir = mkdir(root_path, step_name)
+
         for pb in pbs[0::2]:
             nums = pb.find("td", {"class": "list_problem_id"}).text
             subs = pb.find("a").text
             file_name = f"{str(cnt).zfill(2)}#{nums}_{subs}"
+            # 문제별 폴더, 파일(.py, README) 생성하기
             mkproblemdir(make_step_dir,file_name)
             cnt+=1
             problem_num.append(nums)
@@ -154,6 +157,7 @@ if whole_response.status_code == 200:
             pblink = pb.find("a").attrs['href']
             pbcontent = main_url+pblink
             pbcontent_response = requests.get(pbcontent, headers={"User-Agent": "Mozilla/5.0"})
+            
             if pbcontent_response.status_code == 200:
                 pbcontent_html = pbcontent_response.text
                 pbcontent_soup = BeautifulSoup(pbcontent_html, 'html.parser')
