@@ -1,9 +1,12 @@
 import requests
 import sys
 from bs4 import BeautifulSoup
+import os
+import re
+
 
 def savewithtext(need_step,step_name,problem_num,problem_sub,problem_des):
-    sys.stdout=open(f'output {need_step}.txt','w')
+    sys.stdout=open(f'storage/output {need_step}.txt','w')
     # 블로그 html 출력부
     print(f'[백준/python] {step_name} 전체 풀이({need_step}단계)')
     print('''
@@ -77,8 +80,25 @@ def urlrequest(url):
     response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
     return response
 
+def mkdir(root_path, step_name):
+    make_step_dir = f"{root_path}/{step_name}"
+    if step_name in os.listdir(root_path):
+        print("동일 이름을 가진 폴더가 존재합니다." , step_name)
+    else:
+        os.mkdir(make_step_dir)
+    return make_step_dir
 
+def mkproblemdir(make_step_dir,file_name):
+    file_name = re.sub(r"[\/*?<>|]","MoD",file_name)
+    make_problem_dir = f"{make_step_dir}/{file_name}"
+    if file_name in os.listdir(make_step_dir):
+        print("동일 이름을 가진 폴더가 존재합니다." , file_name)
+    else:
+        os.mkdir(str(make_problem_dir))
+    open(f'{make_problem_dir}/{file_name}.py','w')
+    open(f'{make_problem_dir}/README.md','w')
 
+root_path = "/root/Github/BOJ-python"
 main_url = 'https://www.acmicpc.net'
 url = f'{main_url}/step'
 
@@ -121,9 +141,14 @@ if whole_response.status_code == 200:
             "div", {"class": "breadcrumbs"}).text
         step_body = step_main.find("tbody")
         pbs = step_body.find_all("tr")
+        cnt = 1
+        make_step_dir = mkdir(root_path, step_name)
         for pb in pbs[0::2]:
             nums = pb.find("td", {"class": "list_problem_id"}).text
             subs = pb.find("a").text
+            file_name = f"{str(cnt).zfill(2)}#{nums}_{subs}"
+            mkproblemdir(make_step_dir,file_name)
+            cnt+=1
             problem_num.append(nums)
             problem_sub.append(subs)
             pblink = pb.find("a").attrs['href']
@@ -147,6 +172,9 @@ if whole_response.status_code == 200:
 else:
     print("파싱 에러",whole_response.status_code)
     raise ConnectionError("크롤링 HTML 가져오지 못하였음")
+
+
+
 
 savewithtext(need_step,step_name,problem_num,problem_sub,problem_des)
 
