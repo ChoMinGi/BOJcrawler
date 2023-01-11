@@ -127,3 +127,12 @@ Also, the folder by subject is in the following format, create the folder accord
 
 So....... It's not a crawler, but a posting macro helper for me. :)
 이제는 크롤러가 아니라 나만의,, 포스팅 헬퍼가 되었습니다 :)
+
+
++ 추가
+
+
+https://github.com/ChoMinGi/BOJ-python/commit/b8af02842dcdbd8f45cbdc77a732631365858c5f
+
+
+위 크롤러의 mkdir, mkproblemdir 을 사용한 결과물
