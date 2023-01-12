@@ -4,12 +4,12 @@ from bs4 import BeautifulSoup
 import os
 import re
 
-
-def savewithtext(need_step,step_name,problem_num,problem_sub,problem_des):
-    sys.stdout=open(f'storage/output {need_step}.txt','w')
+def savewithtext(need_step,step_name,problem_num,problem_sub,problem_des,make_step_dir,file_namelist):
+    problem_sublist=[]
+    savetext=open(f'output{need_step}.txt','w')
     # 블로그 html 출력부
-    print(f'[백준/python] {step_name} 전체 풀이({need_step}단계)')
-    print('''
+    savetext.write(f'[백준/python] {step_name} 전체 풀이({need_step}단계)')
+    savetext.write('''
     <p data-ke-size="size16">&nbsp;</p>
     <!-- 목차 부분 -->
     <div class="book-toc">
@@ -21,15 +21,24 @@ def savewithtext(need_step,step_name,problem_num,problem_sub,problem_des):
     <!-- 제목 -->
     ''')
     for i in range(len(problem_num)):
-        print(f'<h3 data-ke-size="size23"><b><span style="font-family: \'Noto Serif KR\';">{problem_sub[i]}<b>(#{problem_num[i]})</b></b></h3>')
-        print('''
+        file_name=file_namelist[i]
+        make_problem_dir = f"{make_step_dir}/{file_name}"
+        if file_name in os.listdir(make_step_dir):
+            print("동일 이름을 가진 폴더가 존재합니다." , file_name)
+        else:
+            os.mkdir(str(make_problem_dir))
+        pytext = open(f'{make_problem_dir}/{file_name}.py','r').read()
+        readme = open(f'{make_problem_dir}/README.md','r').read()
+        problem_sublist.append(problem_sub[i])
+        savetext.write(f'<h3 data-ke-size="size23"><b><span style="font-family: \'Noto Serif KR\';">{problem_sub[i]}<b>(#{problem_num[i]})</b></b></h3>')
+        savetext.write('''
         <!-- Hint 란 -->
         <ul style="list-style-type: disc;" data-ke-list-type="disc">
         <li><b><span style="font-family: 'Noto Serif KR';">Problem</span></b></li>
         </ul>
         ''')
-        print(f'<p data-ke-size="size16"><span style="font-family: \'Noto Serif KR\';">{problem_des[i]}</p>')
-        print('''
+        savetext.write(f'<p data-ke-size="size16"><span style="font-family: \'Noto Serif KR\';">{problem_des[i]}</p>')
+        savetext.write('''
         <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
         <ul style="list-style-type: disc;" data-ke-list-type="disc">
         
@@ -48,12 +57,19 @@ def savewithtext(need_step,step_name,problem_num,problem_sub,problem_des):
         <!-- 코드 삽입란 -->
         <pre class="vim">
             <code>
-                code code
+        ''')
+        savetext.write(f'\n{pytext}')
+        savetext.write('''
             </code>
         </pre>
         <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">&nbsp;</p>
         
-        <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">contents 01</p>
+        <p data-ke-size="size16"><span style="font-family: 'Noto Serif KR';">
+        
+        ''')
+        savetext.write(f'\n{readme}')
+        savetext.write('''
+        </p>
         
         <!-- 구분선 -->
         <hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
@@ -63,17 +79,19 @@ def savewithtext(need_step,step_name,problem_num,problem_sub,problem_des):
         ''')
 
     # 태그 입력을 위한 키워드
-    print(*problem_sub)
+    print(*problem_sublist)
 
     # 다중 크롤링 시에 구분 색적 용도
-    print("==================================================")
-    print("==================================================")
-    print("==================================================")
-    print("==================================================")
-    print("==================================================")
-    print("==================================================")
-    print("==================================================")
-    print("==================================================")
+    savetext.write("==================================================")
+    savetext.write("==================================================")
+    savetext.write("==================================================")
+    savetext.write("==================================================")
+    savetext.write("==================================================")
+    savetext.write("==================================================")
+    savetext.write("==================================================")
+    savetext.write("==================================================")
+
+    savetext.close()
 
 def urlrequest(url):
     """url header 변형으로 크롤링"""
@@ -145,12 +163,17 @@ if whole_response.status_code == 200:
         # Step 에 해당하는 폴더 생성하기
         make_step_dir = mkdir(root_path, step_name)
 
+        file_namelist=[]
+
+        setmode = int(input("블로그 포스팅용 html을 원한다면 1 을 새로운 단계를 가져오려면 0 을 입력하세요"))
         for pb in pbs[0::2]:
             nums = pb.find("td", {"class": "list_problem_id"}).text
             subs = pb.find("a").text
             file_name = f"{str(cnt).zfill(2)}#{nums}_{subs}"
             # 문제별 폴더, 파일(.py, README) 생성하기
-            mkproblemdir(make_step_dir,file_name)
+            file_namelist.append(file_name)
+            if setmode ==0:
+                mkproblemdir(make_step_dir,file_name)
             cnt+=1
             problem_num.append(nums)
             problem_sub.append(subs)
@@ -179,6 +202,6 @@ else:
 
 
 
-
-savewithtext(need_step,step_name,problem_num,problem_sub,problem_des)
+if setmode == 1:
+    savewithtext(need_step,step_name,problem_num,problem_sub,problem_des,make_step_dir,file_namelist)
 
