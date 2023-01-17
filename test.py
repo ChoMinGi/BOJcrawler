@@ -11,8 +11,8 @@ def rdproblemdir(make_step_dir,file_name):
         print("동일 이름을 가진 폴더가 존재합니다." , file_name)
     else:
         os.mkdir(str(make_problem_dir))
-    pytext = open(f'{make_problem_dir}/{file_name}.py','r')
+    pytext = open(f'{make_problem_dir}/{file_name}.py','r').read()
     readme = open(f'{make_problem_dir}/README.md','r')
 
-    print(pytext.read())
+    print(pytext)
 rdproblemdir(make_step_dir,file_name)
