@@ -137,3 +137,11 @@ https://github.com/ChoMinGi/BOJ-python/commit/b8af02842dcdbd8f45cbdc77a732631365
 
 위 크롤러의 mkdir, mkproblemdir 을 사용한 결과물
 https://nstgic3.tistory.com/102
+
+## version 2.1.0
+
+![image](https://user-images.githubusercontent.com/81455273/212962158-76f64b65-d286-4a4b-a6c0-e8cbebaee0e4.png)
+
+
+블로그 포스팅용 HTML이 필요하여 단계를 새로 크롤링 해오면 기존의 파일들이 전부 삭제(read 의 'w' 옵션이 덮어쓰기를 한다) 되어 버리는 경우가 존재하고 있어서 사용자로 하여금 위의 사진과 같이 새로운 단계를 불러올건지 블로그 포스팅용 HTML을 현재 파일 내에 존재하는 코드 등을 통하여 크롤링 되게 할건지 선택할수 있게 하였습니다.
+
