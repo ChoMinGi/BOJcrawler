@@ -143,7 +143,7 @@ def mkproblemdir(make_step_dir, file_name):
     open(f"{make_problem_dir}/README.md", "w")
 
 
-root_path = "/home/chos/Github/BOJ-python"
+root_path = "/home/chomk/Github/BOJ-python"
 main_url = "https://www.acmicpc.net"
 url = f"{main_url}/step"
 
